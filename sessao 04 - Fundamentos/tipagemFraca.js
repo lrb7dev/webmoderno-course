@@ -1,0 +1,7 @@
+//mesma variavel pode ser de tipos difirentes
+let qualquer = 'legal'
+console.log(qualquer)
+console.log(typeof qualquer)
+qualquer = 3
+console.log(qualquer)
+console.log(typeof qualquer)
