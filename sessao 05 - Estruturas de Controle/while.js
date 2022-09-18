@@ -1,0 +1,16 @@
+// mais indicado para quantidade de repeticoes indeterminadas
+function getInteiroAleatorioEntre(min, max) {
+    const valor = Math.random() * (max - min) + min
+    return Math.floor(valor)
+}
+
+let opcao = 0
+let tentativas = 0
+
+while (opcao != -1) {
+    opcao = getInteiroAleatorioEntre(-1, 10)
+    console.log(`Opção escolhida foi: ${opcao}.`)
+    tentativas++
+}
+
+console.log(tentativas + ' tentativa(s)' + ' | Até a próxima!')
