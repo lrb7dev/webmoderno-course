@@ -286,5 +286,160 @@ recebeFruta('melancia')
 recebeFruta('kiwi')
 recebeFruta('abacate')
 
+console.log("....................................................")
+/*
+24) Crie um programa que imprima 11 vezes a frase " Hello World!" utilizando uma estrutura de repetição while.
+*/
 
+console.log("RESPOSTA 24: \n")
+
+let repeticao = 11
+let ind = 0
+while (repeticao > 0 ) {
+    ind++
+    console.log(`${ind} - Hello World!`)
+    repeticao--
+} 
+
+console.log("...........................................................")
+//25) Escrever um programa para exibir os números de 1 até 50 na tela
+console.log("RESPOSTA 25: \n")
+
+for (let i = 1; i <= 50; i++) {
+    console.log(i)
+}
+
+console.log(".........................................................")
+//26) Fazer um programa para encontrar todos os pares entre 1 e 100.
+console.log("RESPOSTA 26:\n")
+
+let numerosPares = []
+let indiceArray = 0
+
+paresAte100 = a => {
+    for(let i = 2; i <= 100; i++) {
+        if(i % 2 == 0){
+            numerosPares[indiceArray] = i 
+            //console.log(numerosPares)
+            indiceArray++
+        }
+    }
+
+    console.log(numerosPares)
+}
+
+paresAte100(100)
+
+console.log("..........................................................")
+//28) Ler um vetor de números inteiros e imprimir quantos são pares e quantos são ímpares.
+
+console.log("RESPOSTA 28: \n")
+
+const vetorInteiros = [3, 8, 4, 33, 22, 20, 19, 13, -3, -5, -8, 0]
+
+let pareV =0, imparV =0, nuloV = 0
+
+for (let i = 0; i < vetorInteiros.length; i++) {
+    if (vetorInteiros[i] % 2 == 0 && vetorInteiros[i] != 0 ) {
+        console.log(`[${vetorInteiros[i]}] - PAR`)
+        pareV++
+    } else if (vetorInteiros[i] % 2 != 0) {
+        console.log(`[${vetorInteiros[i]}] - ÍMPAR`)
+        imparV++
+    } else {
+        console.log(`[${vetorInteiros[i]}] - NULO`)
+        nuloV++
+    }   
+} // end - 'for'
+
+//quantitativo
+console.log(`Quantidade:
+    Pares -> ${pareV}
+    Ímpares -> ${imparV}
+    Nulos -> ${nuloV} 
+    `)
+
+    console.log("..................................................")
+    /*
+31) Escrever um algoritmo que percorre um vetor de inteiros, conta quantos números negativos há nesse vetor
+e imprime a quantidade no console.
+*/
+console.log("RESPOSTA 31:\n")
+
+const numbsInteiros = [-3, 8, 55, -45, -37, -8.6, 1, 26, 35]
+const numbsNegativos = []
+let contNumbsNegativos = 0
+
+function numsNegativos () {
+    for (let i = 0; i < numbsInteiros.length; i++) {
+        if( numbsInteiros[i] < 0) {
+            numbsNegativos[contNumbsNegativos] = numbsInteiros[i]
+            contNumbsNegativos++
+        }
+    }
+
+    console.log(`Números negativos: ${numbsNegativos}
+    Quantidade de números negativos: ${numbsNegativos.length}
+    `)
+
+}
+
+numsNegativos()
+
+console.log("................................................")
+/*
+35) Crie dois vetores chamados vetorPilha e vetorAdiciona. Inicialmente, o vetorPilha conterá cinco elementos
+inteiros: [1, 2, 3, 4, 5]. Você deverá adicionar os valores contidos no vetorAdiciona [6, 7, 8, 9, 10] ao vetor pilha
+e mostrá-los no console. É importante lembrar que o método Push retorna somente o tamanho do Vetor. Ao
+final das operações imprima os vetores no console.
+*/
+
+console.log("RESPOSTA 35: \n")
+
+let vetorPilha = [1, 2, 3, 4, 5]
+let vetorAdiciona = [6, 7, 8, 9, 10]
+let contadorV = 5
+
+for (let i = 0; i < 5; i++) {
+    vetorPilha[contadorV] = vetorAdiciona[i]
+    contadorV++
+}
+
+console.log(vetorPilha)
+
+console.log("--------------------------------------------------------")
+/*
+40) Faça uma função que receba como parâmetro um vetor de notas e mostre os conceitos de cada uma de
+modo que de 0,0 a 4,9 seja atribuído o conceito D, de 5,0 a 6,9 seja atribuído o conceito C, de 7,0 a 8,9 o
+conceito B e de 9,0 a 10,0 o conceito A.
+*/
+console.log("RESPOSTA 40: \n")
+//const notaDCBA = [0.5, 5.1, 7.8, 9.9, -1, 11]
+
+//conceito da nota
+conceito = nota => {
+    if(nota >= 0 && nota <= 4.9) {
+        console.log(`${nota}: (D)`)
+    } else if (nota >= 5 && nota <= 6.9) {
+        console.log(`${nota}: (C)`)
+    } else if (nota >= 7 && nota <= 8.9) {
+        console.log(`${nota}: (B)`)
+    } else if (nota >= 9 && nota <= 10) {
+        console.log(`${nota}: (A)`)
+    } else {
+        console.log(`${nota} - ERRO - informação incorreta!`)
+    }
+    
+}
+
+//resultado do conceito
+function notaConceito(nota) {
+    for(let i = 0; i < nota.length; i++) {
+        conceito(nota[i])    
+    }
+
+}
+
+
+notaConceito([0.5, 5.1, 7.8, 9.9, -1, 11]) 
 
