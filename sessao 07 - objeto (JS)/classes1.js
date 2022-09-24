@@ -36,5 +36,6 @@ contas.addLancamentos(salario, contaDeLuz)
 
 //resultado da soma
 console.log(contas.sumario())
+//...
 console.log(salario)
 console.log(contaDeLuz)
