@@ -5,3 +5,4 @@ npm i -g lodash -------------> instalar a dependencia LODASH globalmente...
 npm init ===========> criar package.json // formulario antes de criar
 npm init -y ========> criar package.json // com respostas full 'y'
 npm i --save axios =======> instala a dependencia axios no index.js criado pelo init -y
+npm i --save express  ==========> para versao predefinida ' npm i --save express@versao -E(flag 'E' de exact)
