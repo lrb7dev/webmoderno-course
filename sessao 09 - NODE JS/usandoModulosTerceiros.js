@@ -6,6 +6,7 @@
  * aplicacao rodando tempo real enquanto edita
  */
 
+//biblioteca, assim como o 'axios'
 const _ = require('lodash')
 
 //funcao do lodash -> ..._.random((minNumber, maxNumber), numberOverload)
