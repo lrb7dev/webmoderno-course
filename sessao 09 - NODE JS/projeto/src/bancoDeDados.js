@@ -26,5 +26,12 @@ function getProdutos() {
     return Object.values(produtos)
 }
 
+//excluir
+function excluirProduto(id) {
+    const produto = produtos[id]
+    delete produtos[id]
+    return produto
+}
+
 //visiveis para fora do arquivo bancoDeDados.js
-module.exports = {salvarProduto, getProduto, getProdutos}
+module.exports = {salvarProduto, getProduto, getProdutos, excluirProduto}
