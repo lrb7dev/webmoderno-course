@@ -1,4 +1,6 @@
-console.log("........................................................\n")
+
+linha = () => console.log('===============================\n')
+
 /*
 1) Crie uma função que retorna a string "Olá, " concatenada com um argumento text 
 (a ser passado para a função)
@@ -15,7 +17,7 @@ console.log("........................................................\n")
  const individuo = palavra('Rebeca')
  console.log(individuo)
 
- console.log("........................................................\n")
+ linha()
 /*
 2) Escreva uma função que receba a idade 
 de uma pessoa em anos e retorne a mesma idade em dias.
@@ -27,7 +29,7 @@ const idade = 9
 const idadeEmDias = idadePessoa =>  idadePessoa = idadePessoa * 365
 console.log(`${idade} anos de idade é igual a ${idadeEmDias(idade)} dias.`)
 
-console.log("........................................................\n")
+linha()
 /*
 3) Desenvolva uma função que recebe dois parâmetros, um é a quantidade de horas trabalhadas 
 por um funcionário num mês, e o quanto ele recebe por hora. O retorno da função 
@@ -46,7 +48,7 @@ salarioMesFuncionario = (horasTrab, valorHorasTrab) => {
 
 salarioMesFuncionario(horasTrabalhadas, valorPorHoraTrabalhada)
 
-console.log("........................................................\n")
+linha()
 /*
 4) Crie uma função que recebe um número (de 1 a 12) e retorne o mês correspondente como uma string. 
 Por exemplo, se a entrada for 2, a função deverá retornar "fevereiro", pois este é o 2° mês.
@@ -75,7 +77,7 @@ mesCorrespondente = numEscolhido => {
 
 mesCorrespondente(numEscolhido)
 
-console.log("........................................................\n")
+linha()
 /*
 5) Crie uma função que receba dois números e retorne se o primeiro é maior ou igual ao segundo
  */
@@ -94,7 +96,7 @@ maiorOuIgual(1,2)
 maiorOuIgual(2,2)
 maiorOuIgual(10,2)
 
-console.log("........................................................\n")
+linha()
 /*
 6) Escreva uma função que receba um valor booleano ou numérico. Se o parâmetro fornecido for booleano, 
 o retorno da função deverá ser o inverso. Por exemplo, se a entrada for false, retornará true. 
@@ -136,7 +138,7 @@ inverterValores(-3)
 inverterValores(-3*5)
 inverterValores('dois')
 
-console.log("........................................................\n")
+linha()
 /*
 7) Desenvolva uma função que recebe dois números inteiros não negativos (maiores ou iguais a zero) 
 e realize a multiplicação deles. Porém, não utilize o operador de mutiplicação.
@@ -161,7 +163,7 @@ doisNumerosInteirosPositivos(0,2)
 doisNumerosInteirosPositivos(2,0)
 doisNumerosInteirosPositivos(-2,3)
 
-console.log("........................................................\n")
+linha()
 /*
 8) Escreva uma função que receba dois parâmetros. O primeiro parâmetro é o elemento que repetirá, 
 enquanto que o segundo será o número de vezes que haverá repetição. Um array será retornado.
@@ -183,7 +185,7 @@ repeticaoDeNumEmArray = (num, numRepeticao) => {
 repeticaoDeNumEmArray('dois', 4)
 repeticaoDeNumEmArray(33, 3)
 
-console.log("........................................................\n")
+linha()
 /*
 9) Crie uma função que receba uma array e retorne o primeiro e o último elemento desse 
 array como um novo
@@ -211,7 +213,7 @@ gerarNovoArray = array => {
 
 gerarNovoArray(meuArray)
 
-console.log("........................................................\n")
+linha()
 /*
 10) Crie uma função que receba um array de elementos e retorne um array somente 
 com os números presentes no array recebido como parâmetro.
@@ -234,7 +236,7 @@ arraySomenteNumeros = array => {
 
 arraySomenteNumeros(arrayDeElementos)
 
-console.log("........................................................\n")
+linha()
 /*
 11) Você está trabalhando numa aplicação pessoal de controle de despesas. 
 Na tela principal dessa aplicação, é possível adicionar produtos ou serviços, 
@@ -266,7 +268,7 @@ const despesaTotal =  despesas.map(d => d.preco).reduce(function(precoAnterior, 
 
 console.log(`Total despesas: R$ ${despesaTotal.toFixed(2).replace('.', ',')}`)
 
-console.log("........................................................\n")
+linha()
 /*
 12) calcula a media de um array de tamanho indeterminado
  */
@@ -299,7 +301,7 @@ resultadoArray = (arr) => {
 const mediaResp = resultadoArray([3, 8, 4, 5, 6.9, 8.9])
 console.log(mediaResp.toFixed(2))
 
-console.log("........................................................\n")
+linha()
 /*
 14) Desenvolva uma função que receba como parâmetro um número de 1 a 10. 
 Internamente, na função, será gerado um número aleatório de 1 a 10. 
@@ -327,7 +329,7 @@ const playerNumber = numb => {
 
 playerNumber(3)
 
-console.log("........................................................\n")
+linha()
 /*
 15) Criar uma função que receba 
 uma string como parâmetro e conte quantas palavras tem nela.
