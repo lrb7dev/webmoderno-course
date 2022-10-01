@@ -1,0 +1,42 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios HTML</title>
+</head>
+
+<body>
+    <header>
+        Exercícios HTML
+    </header>
+    <nav>
+        <!-- propriedade personalizada [wm-nav] -->
+        <a href wm-nav="./exercicios/teste.html">00 - Teste</a> |
+        <a href wm-nav="./exercicios/texto1.html">01 - Texto 1</a> |
+        <a href wm-nav="./exercicios/texto2.html">02 - Texto 2</a>
+    </nav>
+    <section id="conteudo"></section>
+    <footer>
+        <br>
+        Curso de Web Moderno
+    </footer>
+    <script>
+        //percorrer o documento e selecionar a tag <a> e para cda link nela...
+        document.querySelectorAll('[wm-nav]').forEach(link => {
+            link.onclick = function (e) {
+                //cancela o evento sem parar a propagacao do mesmo
+                //prevenir o comportamento padrao que é navegar
+                e.preventDefault()
+                //funcao Ajax em cima do atributo href
+                fetch(link.getAttribute('wm-nav'))
+                    .then(resp => resp.text()) //funcao text retornando o conteudo
+                    .then(html => conteudo.innerHTML = html) //quando resolvida adiciona o conteudo html
+            }
+
+        })
+    </script>
+</body>
+
+</html>
