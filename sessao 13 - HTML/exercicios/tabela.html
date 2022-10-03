@@ -1,0 +1,72 @@
+<h1>Tabela</h1>
+
+<!--border="3"-->
+<table style="text-align: center;">
+    <caption>Produtos</caption>
+    <thead>
+        <tr>
+            <th>PRODUTO</th>
+            <th>PREÇO</th>
+            <th>QUANTIDADE</th>
+            <th>TOTAL</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Ipad</td>
+            <td>R$ 5696.52</td>
+            <td>12</td>
+            <td>R$ 68.358,24</td>
+        </tr>
+        <tr>
+            <td>PS5</td>
+            <td>R$ 4.500,00</td>
+            <td>10</td>
+            <td>R$ 45.000,00</td>
+        </tr>
+        <tr>
+            <td>SMART TV 50'</td>
+            <td>R$ 2.117,25</td>
+            <td>8</td>
+            <td>R$ 16.938,00</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <!--'td' ocupando 3 colunas-->
+            <td colspan="3">TOTAL</td>
+            <td>R$ 130.296,24</td>
+        </tr>
+    </tfoot>
+</table>
+
+<style>
+    table {
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    thead tr {
+        border-bottom: solid 3px #565;
+    }
+
+    thead th:hover {
+        background-color: rgba(0, 124, 133, 0.568);
+    }
+
+    tbody tr:hover {
+        background-color: rgba(113, 255, 248, 0.753);
+    }
+
+    tfoot {
+        background-color: rgba(0, 124, 133, 0.568);
+    }
+
+    tfoot tr:hover {
+        background-color: rgba(44, 118, 255, 0.61);
+    }
+
+</style>
