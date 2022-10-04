@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Especificidade CSS</title>
+    <style>
+        /* https://specificity.keegan.st/ */
+        /*
+        ORDEM...
+        1- Inline
+        2- ID
+        3- CLasse, Pseudo-Classe, atributo
+        4- Elemento, Pseudo-Elemento
+        */
+        body { font-size: 40px;}
+        /*nilvel 4 - mais baixo de especificidade*/
+        div{ background-color: #00b; color: #fff;}
+        /*especificidade maior*/
+        div[wm-cor] {background-color: rgb(155, 158, 0);}
+        /*empate com a de cima, neste caso o ultimo processo que vale*/
+        div[wm-cor]:hover {background-color: rgb(255, 67, 67);}
+        /*nivel 3 - classe*/
+        div.estilo {background-color: #468;}
+        /*nivel 2 - ID*/
+        #unico1, #unico2 {background-color: rgba(249, 62, 255, 0.63);}
+
+
+    </style>
+</head>
+
+<body>
+    <div id="unico1" class="estilo" style="background-color: rgb(14, 155, 84);">
+        #unico1 vs .estilo vs inline
+    </div>
+    <div id="unico2" class="estilo">#unico2 vs .estilo</div>
+    <div class="estilo" wm-cor>.estilo vs wm-cor</div>
+    <div wm-cor>wm-cor</div>
+    <div class="estilo">.estilo</div>
+    <div>elemento</div>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Selectors</title>
+    <link rel="stylesheet" href="css/tag.css">
+    <style>
+        p {background-color: rgb(228, 22, 176);}
+        /* p ~ ol*/
+        /* [feira*=sa] */
+        /*[feira]*/
+        /*span:nth-child(2)*/
+        /*ul > :nth-child(odd)*/
+        /*entre outas...*/
+        ul > li:nth-child(even){
+            color: aqua;
+            background-color: rgb(8, 82, 6);
+        }
+        ul > li:nth-child(odd) {
+            color: bisque;
+            background-color: rgb(94, 0, 0);
+        }
+        ol > li:nth-of-type(3) {
+            color: aliceblue;
+            background-color: rgb(133, 87, 31);
+        }
+    </style>
+</head>
+
+<body>
+    <div class='tag'>
+        <div class='tag'>
+            <p class='tag'>1</p>
+            <ul class='tag' feira='casa'>
+                <li>Arroz</li>
+                <li>Feijão</li>
+            </ul>
+            <ul class='tag' feira='escritorio empresa'>
+                <li>Café</li>
+                <li>Água</li>
+            </ul>
+            <ol id='aprovados' class='tag'>
+                <li>Maria</li>
+                <li>Pedro</li>
+                <li>Ana</li>
+            </ol>
+            <div id='aninhado' class='tag'>
+                <div class="tag">
+                    <section class='tag'>
+                        <span class='tag'>1</span>
+                        <p class='tag'>2</p>
+                        <span class='tag'>3</span>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/tag.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Especificidade CSS</title>
+    <style>
+        /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity */
+        /*
+        Ordem...
+        1. regra com !important (tente evitar)
+        2. seletores mais especificos
+        3. ultima regra processada (empate)
+        */
+        p {
+            background-color: #4658;
+        }
+
+        /*classe tem prioridade em cima da tag*/
+        .observacao {
+            background-color: rgba(11, 235, 123, 0.533);
+            border: dashed 5px;
+            padding: 20px;
+            font-size: 40px;
+        }
+
+        /*seletores mais especificos tem prioridade sobre os citados a cima*/
+        p.observacao {
+            background: linear-gradient(to right, rgba(228, 116, 41, 0.533), rgb(37, 224, 131));
+        }
+
+        /*!important*/
+        .observacao {
+            background: linear-gradient(to left, rgb(80, 0, 0), rgb(252, 104, 141))!important
+        }
+
+    </style>
+</head>
+
+<body>
+    <p class='observacao'>Olha essa observação!!!!</p>
+</body>
+
+</html>
