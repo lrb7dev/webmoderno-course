@@ -8,11 +8,35 @@
         /* 
         ============== UNIDADES =============
         .        ABSOLUTOS: px, cm, mm      .
-        .  VIEWPORT: vh, vw, vmin, vmax, %  .
-        .           FONT: rem, em, %        .
+        .  VIEWPORT: vh, vw, vmin, vmax, (%)  .
+        .           FONT: rem, em, (%)        .
         ===================================== 
         */
-        
+
+        .unidades-absolutas {
+            position: absolute; /*usando essa position por conta de algumas propriedades do exemplo (top e left)*/
+            font-size: 40px;
+            padding: 20px;
+            border: solid 5px #465;
+            margin: 30px;
+            width: 4cm; /*pouco usado*/
+            height: 20mm; /*pouco usado*/
+            top: 150px;
+            left: 200px;
+        }
+
+        .unidades-relativas {
+            position: absolute; /*para o exemplo*/
+            font-size: 4em;
+            padding: 5%;
+            border: solid 1vw #555;
+            margin: .8%;
+            width: 20vw;
+            height: 15vh;
+            bottom: 5%;
+            right: 5%;
+        }
+
     </style>
 </head>
 
