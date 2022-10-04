@@ -11,18 +11,32 @@
 
         .c1 {
             background-color: red;
+            float: right;
         }
 
         .c2 {
             background-color: green;
+            clear: right; /*limpa o float acima para nao ocupar a mesma linha*/
+            float: left;
         }
         
         .c3 {
             background-color: blue;
+            clear: both; /*limpa os float's acima para nao ocupar a mesma linha*/
+            float: right;
+
         }
 
         .c4 {
             background-color: orange;
+            clear: both; /*limpar os floats acima para nao ocupar a mesma linha*/
+        }
+
+        div {
+            width: 150px;
+            height: 150px;
+            /*float: right;*/
+            
         }
     </style>
 </head>
