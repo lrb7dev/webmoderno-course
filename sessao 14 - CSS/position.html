@@ -5,7 +5,71 @@
     <meta charset="UTF-8">
     <title>Position</title>
     <style>
-        /* ... */
+        div {
+            font-size: 60px;
+            padding: 30px;
+            border: solid 5px #313;    
+        }
+
+        .static {
+            /*por ser static, nao ha mudança em top e left / static é padrao da div*/
+            top: 100px;
+            left: 100px;
+            background-color: aquamarine;
+        }
+
+        .fixed {
+            position: fixed;
+            bottom: 30px;
+            right: 0px;
+            background-color: tomato;
+        }
+
+        /*leva em consideracao o elemento anterior*/
+        .relative1 {
+            position: relative;
+            left: 50px;
+            top: 5px;
+            background-color: blanchedalmond;
+        }
+
+        /*se posiciona de forma absoluta no body*/
+        .absolute1 {
+            position: absolute;
+            left: 350px;
+            top: 120px;
+            background-color: rgba(97, 255, 82, .55);
+        }
+
+        /*absolute dentro de uma div relative se posiciona referente a ela*/
+        .relative2 {
+            position: relative;
+            left: 250px;
+            top: 2000px;
+            background-color: rgb(255, 236, 60);
+            width: 200px;
+            height: 200px;
+        }
+
+        .absolute2 {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            width: 20px;
+            height: 20px;
+            background-color: rgb(41, 252, 252);
+            font-size: 12px;
+        }
+
+        /*a partir de determinado ponto ira ficar parecido com "fixed"*/
+        .sticky {
+            position: -webkit-sticky; /*navegador: SAFARI*/
+            position: sticky;
+            background-color: rgb(206, 55, 236);
+            top: 10px; /*a partir de 10px*/
+        }
+
+
     </style>
 </head>
 
@@ -16,7 +80,8 @@
     <div class="absolute1">Absolute</div>
 
     <div class="relative2">
-        <div class="absolute2"></div>
+        <br>Relative 02
+        <div class="absolute2"> absolute 02</div>
     </div>
 
     <div class="sticky">Sticky</div>
