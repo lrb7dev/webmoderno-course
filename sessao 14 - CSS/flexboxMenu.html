@@ -54,6 +54,32 @@
         /* ==================== */
         /* Solução com Flex Box */
         /* ==================== */
+
+        .cabecalho {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /*espaço entre eles*/
+        }
+
+        .menu {
+            /*terá mais espaços que os outros*/
+            flex-grow: 10;
+        }
+
+        /**/
+        .menu ul {
+            /*por padrao o Main Axis é na horizontal(x)*/
+            display: flex;
+            /*espaçamento*/
+            /*justify-content: space-around;*/
+        }
+
+        .menu li {
+            margin: 0px 10px;
+        }
+
+
+
     </style>
 </head>
 

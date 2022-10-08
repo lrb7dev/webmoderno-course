@@ -6,7 +6,49 @@
     <title>Flexbox #02</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        .flex-container div {
+            box-sizing: border-box;
+        }
+
+        .flex-container {
+            display: flex;
+            height: 300px;
+            width: 600px;
+        }
+
+        .flex-container div:nth-child(3) {
+            background-color: tomato;
+            
+            order: 1; /*passa a ser de maior ordem dentro da sequencia, quanto maior mais ao final é sua posicao*/
+            order: 0; /*posicao igual aos demais*/
+            order: -1; /*sera o primeiro por ser a menor posicao em realacao aos outros*/
+            
+            /*align-self: center;
+            align-self: flex-end;
+            align-self: flex-start;*/
+        }
+
+        .flex-container div {
+            width: 100px; /*ocorrerá espaços deixados*/
+            flex-grow: 0; /*continua exatamente o mesmo tamanho*/
+            flex-grow: 1; /*dara peso 1 a todos e dividir os pixels restantes/4 e reparti-los pelos flex itens*/   
+        }
+
+        /*primeiro elemento que esta visualmente na div*/
+        .flex-container div:nth-child(1) {
+            flex-grow: 1;
+        }
+        .flex-container div:nth-child(2) {
+            flex-grow: 3;
+            background-color: rgb(202, 146, 255);
+        }
+
+        /*flex container com shrink*/
+
+
+        /*...*/
+
+
     </style>
 </head>
 
