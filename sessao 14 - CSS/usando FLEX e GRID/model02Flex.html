@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/tag.css">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        font-size: 1.2em;
+    }
+
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .group {
+        display: flex;
+        flex-direction: row;
+        min-height: 85%;
+        flex-wrap: nowrap;
+    }
+
+    .main-nav {
+        min-height: 50px;
+        background-color: rgb(124, 255, 189);
+    }
+
+    .sec-nav {
+        background-color: rgb(0, 197, 115);
+        width: 5%;
+    }
+
+    .content {
+        background-color: aqua;
+        width: 70%;
+    }
+
+    .aside-content {
+        background-color: rgb(170, 170, 170);
+        width: 25%;
+    }
+
+    .footer-info {
+        background-color: rgb(255, 134, 249);
+        height: 10%;
+        padding: 0;
+        margin: 0;
+    }
+    
+
+</style>
+<body>
+    <div class="container tag">
+        <nav class="tag main-nav">Main Navigation</nav>
+        <div class="group tag">
+            <nav class="tag sec-nav">2º NAV</nav>
+            <div class="content tag">Content</div>
+            <aside class="tag aside-content">Aside Content</aside>
+        </div>
+        <footer class="tag footer-info">Footer informations</footer>
+    </div>
+    
+</body>
+<!--<script src="js/tag.js"></script>-->
+</html>

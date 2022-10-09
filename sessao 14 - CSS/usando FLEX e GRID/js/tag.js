@@ -7,8 +7,8 @@ const colors = {
     ol: '#fbc02d',
     header: '#d81b60',
     nav: '#64dd17',
-    main: '#00acc1',
-    footer: '#304ffe',
+    main: 'tomato',
+    footer: '#e69',
     body: '#25b6da',
     padrao: '#616161',
     get(tag) {

@@ -5,13 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/tag.css">
     <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .flex-nav {
+            min-height: 50px;
+            background-color: rgb(31, 160, 6);
+        }
+
+        .flex-content {
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+        }
+        
+        .content01 {
+            /*background-color: aquamarine;*/
+            flex-grow: 10;
+        }
+
+        .content02 {
+            flex-grow: 2;
+        }
+
+        .content01 {
+            background-color: rgb(129, 108, 231);
+        }
+
+        .content02 {
+            background-color: rgb(112, 177, 235);
+        }
+    </style>
 </head>
 <body>
     <div class="flex-container tag nolabel">
-        <nav class="tag">01</nav>
-        <nav class="tag">02</nav>
-        <div class="tag">03</div>
-        <footer class="tag">04</footer>
+        <nav class="tag flex-nav">01</nav>
+        <div class="flex-content">
+            <div class="tag content01">02</div>
+            <div class="tag content02"><aside class="tag">03</aside></div>
+        </div>
+        
     </div>
     
 </body>
