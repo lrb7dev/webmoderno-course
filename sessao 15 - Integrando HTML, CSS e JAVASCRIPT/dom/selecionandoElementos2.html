@@ -10,7 +10,24 @@
     <div>Segundo</div>
     <div class="terceiro ultimo"><span wb-attrib>.terceiro .ultimo</span></div>
     <script>              
-        // ...
+        // ... chamando por seletores [mais flexivel]
+        document.querySelector('#primeiro').classList.add('destaque')
+
+        //querySelectAll - retorna um nodeList
+        const selecionar = seletor => document.querySelectorAll(seletor).forEach(e => e.classList.add('destaque'))
+        const noSelect = noSelect => document.querySelectorAll(noSelect).forEach(e => e.classList.remove('destaque')) 
+
+        //selecionar('div')
+        selecionar('.ultimo')
+        noSelect('div') //remove a classe 'destaque' de todas as div's
+        //noSelect('*')
+
+        selecionar('#primeiro')
+        selecionar('.terceiro')
+        noSelect('#primeiro') //remove a classe 'destaque' da div.primeiro
+
+        selecionar('div:nth-child(2)') //seleciona a segunda div e coloca a classe 'destaque' nela.
+
     </script>
 </body>
 </html>

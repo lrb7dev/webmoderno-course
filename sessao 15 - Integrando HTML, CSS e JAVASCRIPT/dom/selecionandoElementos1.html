@@ -9,8 +9,26 @@
     <div id="primeiro">#primeiro</div>
     <div>Segundo</div>
     <div class="terceiro ultimo">.terceiro .ultimo</div>
-    <script>              
-        // ...
+    <script>    
+        //pega o ID e adiciona uma classe na tag          
+        document.getElementById('primeiro').classList.add('destaque')
+        //vem dentro de um HTML Collection
+
+        //retornar lista com todos os elmentos do html -neste caso os DIV -
+        const divs = document.getElementsByTagName('div')
+        //remove a classe 'destaque' das DIV's que estiverem com ela.
+        Array.from(divs).forEach(e => e.classList.remove('destaque'))
+        //aplicando a classe 'destaque' para todos
+        const divsArray = [...divs]
+        divsArray.forEach(e => e.classList.add('destaque'))
+
+        //removendo classes atraves de selecao de outras classes da tag
+        const ultimoElemento = document.getElementsByClassName('ultimo')
+        //usando for para nao iteirar para array (opcional).
+        for(let e of ultimoElemento) {
+            e.classList.remove('destaque')
+        }
+
     </script>
 </body>
 </html>
