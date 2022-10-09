@@ -1,0 +1,65 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando FLEX e GRID</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        
+        ul {
+            background-color: rgb(10, 84, 119);
+            padding: 25px;
+            width: 100%;
+        }
+
+        li {
+            list-style: none;
+            padding: 15px;
+            margin: 5px;
+            background-color: rgb(9, 70, 70);
+            border: 1px solid rgb(255, 255, 255);
+            text-align: center;
+        }
+
+        li:hover {
+            background-color: rgb(91, 178, 255);
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            font-size: 1.3em;
+            font-weight: bolder;
+        }
+
+        .conteudo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 50%;
+        }
+
+        .indice {
+            min-width: 300px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="conteudo">
+        <div class="indice">
+            <ul>
+                <li><a href="model01Flex.html">MODEL 01 [FLEX]</a></li>
+                <li><a href="">MODEL 01 [GRID]</a></li>
+            </ul>
+        </div>  
+    </div>
+</body>
+</html>
