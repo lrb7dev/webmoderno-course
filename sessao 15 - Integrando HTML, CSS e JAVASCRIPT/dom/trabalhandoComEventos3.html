@@ -14,19 +14,19 @@
         .esquerda {
             height: 100vh;
             width: 50%;
-            background-color: coral;
+            background-color: #64788b;
         }
         
         .direita {
             height: 100vh;
             width: 50%;
-            background-color: cornflowerblue;
+            background-color: #a9ecff;
         }
         
         .item {
-            border: solid 5px black;
-            background-color: darkgrey;
-            color: white;
+            border: solid 5px #ffffff;
+            background-color: #c15be0;
+            color: #000;
             height: 100px;
             font-size: 40px;
             margin: 10px;
@@ -45,7 +45,37 @@
     </div>
     <div class="direita" wm-dropzone></div>
     <script>
-        // ...
+        // selecionando a tag com a classes .item que estão na classe personalizada: wm-dropzone
+        const items = document.querySelectorAll('[wm-dropzone] .item')
+        //for each para rodar em todos os .item
+        items.forEach((item, index) => {
+            //torna-o arrastavel
+            item.draggable = true
+            //gerando id's diferentes
+            item.id = item.id || `draggable-item-${index}`
+            //quando começar a arrastar o elemento
+            item.ondragstart = e =>
+            //setar o id no elemento
+            e.dataTransfer.setData('item-id', e.target.id)
+        })
+
+        //selecionando a <div> com a classe personalizada [wm-dropzone]
+        const dropzones = document.querySelectorAll('[wm-dropzone]')
+        dropzones.forEach(dropzone => {
+            //quando termina de arrastar o elemento = evento 'default' para nao acontecer nada neste momento
+            dropzone.ondragover = e => e.preventDefault()
+            //quando soltar o elemento...
+            dropzone.ondrop = function(e) {
+                //pegando o id do elemento...
+                const id = e.dataTransfer.getData('item-id')
+                const item = document.getElementById(id) //id que já está no HTML
+                //e.target.appendChild(item) //ira acumular no e.target
+                //certo para esse exemplo...
+                dropzone.appendChild(item)
+            }
+        })
+
+
     </script>
 </body>
 

@@ -22,7 +22,37 @@
         <p>Fim</p>
     </div>
     <script>
-        // ...
+        function log() {
+            console.log(this)
+        }
+
+        HTMLCollection.prototype.log = log
+        HTMLElement.prototype.log = log
+        NodeList.prototype.log = log
+        Node.prototype.log = log
+
+        //selecionando a 'div ul' -- NodeList
+        const lista = document.querySelector('div ul')
+        lista.parentNode.log() //selecionando o pai de ul
+        lista.childNodes.log() //mostrando todos os filhos - porem aparecem 'texts' por conta do espaço entre as 'li'
+
+        const primeiro = lista.firstChild
+        primeiro.log()// 'text' por causa dos espaços em branco
+        primeiro.nextSibling.log() // '<li>Pedro</li>' por ser o irmao mais proximo
+
+        const ultimo = lista.lastChild
+        ultimo.log() //paga o ultimo filho 'text' por causa do espaço em branco
+        ultimo.previousSibling.log() //pega o irmao anterior '<li>Bia</li>'
+
+        lista.children.log() //neste caso pega somente os 'li' porem vem com HTMLCollection
+        lista.lastElementChild.log() // '<>Bia<li/>'
+
+        //elemento anterior ao parent da 'lista'
+        lista.parentNode.previousElementSibling.log()
+
+        //Node List
+        document.querySelectorAll('div ul li').log()
+
     </script>
 </body>
 

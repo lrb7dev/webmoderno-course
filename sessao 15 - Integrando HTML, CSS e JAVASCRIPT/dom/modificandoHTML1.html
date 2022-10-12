@@ -9,7 +9,37 @@
 
 <body class='conteudo exercicio'>
     <script>
-        // ...
+        const body = document.querySelector('body')//selecionando o body
+
+        const div1 = document.createElement('div')//criando a div
+        div1.classList.add('destaque')//adicionado classe na div
+        div1.innerHTML = 'Primeiro' //adicionando texto na div
+
+        const div2 = document.createElement('div')//criando div
+        div2.setAttribute('wm-atributo', 'valor')//criando um atributo
+        div2.innerHTML = 'Segundo'
+
+        const p = document.createElement('p') //criando um paragrafo
+        p.innerHTML = 'Terceiro' //adicionando texto no 'p'
+        const div3 = document.createElement('div')//criando div
+        div3.appendChild(p) //adicionando o 'p' na 'div' criada //ultimo filho de 'div3'
+        div3.classList.add('destaque')
+
+        //inserindo no body
+        body.appendChild(div1) //adicionando 'div1' no 'body'
+        body.appendChild(div2) //adicionando 'div2' no 'body'
+        body.appendChild(div3) //adicionando 'div3' no 'body'
+
+        //inserir elementos em elementos existentes - antes de algum outro dentro deste
+        const texto = document.createTextNode('Antes...')
+        div3.insertBefore(texto, div3.childNodes[0])
+        
+
+        //clonar
+        const div4 = div3.cloneNode(true) // true = copia todos os filhos e 'false', nao.
+        body.appendChild(div4)
+        //body.removeChild(div4) //deletar
+
     </script>
 </body>
 

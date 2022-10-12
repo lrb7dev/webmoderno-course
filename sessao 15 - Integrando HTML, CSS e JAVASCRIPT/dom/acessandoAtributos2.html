@@ -10,14 +10,42 @@
 <body class='conteudo exercicio'>
     <div>
         <label for="compras">Compras</label>
-        <ul id="compras" destino='escritório' data-urgencia="5">
+        <ul id="compras" destino='escritório' data-urgencia="5" data-outro="outro">
             <li>Café</li>
             <li>Água</li>
             <li>Copo Descartável</li>
         </ul>
     </div>
     <script>
-        // ...
+        //Armazenando a list...s
+        //const lista = document.querySelector('div ul[destino="escritorio"]')
+        const lista = document.querySelector('#compras')
+        console.log('-----------------Elemento "ul"-----------------')
+        console.log('childNodes', lista.childNodes)
+        console.log('destino', lista.id)
+        lista.setAttribute('destino', 'empresa') //trocando nome atributo
+        lista.setAttribute('status', 'ativo') //adiciona novo atributo
+        console.log('hasAttribute', lista.hasAttribute('status')) //checar se tem o atributo
+        lista.removeAttribute('status')
+        console.log('hasAttribute', lista.hasAttribute('status')) //será 'false' por ter sido removido
+
+
+        //atributo começando com 'data-' tem uma certa caracteristica
+        //é esperado que os atributos personalizados comecem com 'data-' (opcional)
+        //no console:
+        //          |> DOMStringMap {urgencia: '5', outro: 'outro'}
+        console.log(lista.dataset)
+        
+        //alterando estes atributos...
+        lista.dataset.urgencia = 3
+        lista.dataset.outro = 'novo'
+        console.log(lista.getAttribute('data-urgencia'))
+
+        //cuidado!!!
+        const label = document.querySelector('label')
+        console.log('nao seleciona o atributo -for- por ser palavra reservada: ' + label.for)
+        console.log('jeito correto de acessar o atributo -for- : ' + label.htmlFor)
+        console.log('outra maneira correta: ' + label.getAttribute('for'))
     </script>
 </body>
 

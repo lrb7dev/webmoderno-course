@@ -16,7 +16,20 @@
         </ul>
     </div>
     <script>
-        // ...
+        //function
+        log = (texto, comando) => console.log(texto, comando, "\n=================")  
+
+        const lista = document.querySelector('#compras')
+
+        //somente leitura
+        log("lista dos atributos: ", lista.attributes)
+        log("atributo[0]: ", lista.attributes[0])
+        log("atributo[1]: ", lista.attributes[1])
+        log("atributo / id: ", lista.attributes.id)
+        log("atributo / destino: ", lista.attributes.destino)
+        log('atributo: ', lista.attributes['data-urgencia'])
+
+
     </script>
 </body>
 

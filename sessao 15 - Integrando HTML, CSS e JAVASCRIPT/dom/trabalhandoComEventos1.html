@@ -9,9 +9,33 @@
 
 <body class="conteudo exercicio">
     <div>
-        <a href="https://google.com.br">Google</a>
+        <!--onclick="navegarEm5s(event)"--> 
+        <!--vantagem: explicito no código-->
+        <!--desvantagem: hard coded-->
+        <a wait-sec href="https://google.com.br">Google</a>
     </div>
     <script>
-        // ...
+        // interceptar o clique
+        function navegarEm5s(e) {
+            e.preventDefault() //Cancela o evento se for cancelável, sem parar a propagação do mesmo.
+            console.log('Saindo em 5s...')
+            setTimeout(() => {
+                const link = e.target //const criada apenas para demonstrar que o e.target é o link do 'a'
+                window.location.href = link.href
+            }, 5000)
+        }
+
+        //uma forma melhor de tratar...
+        //VANTAGEM: sem hard coded
+        //DESVANTAGEM: implícito
+        //const a = document.querySelector('a')
+        //a.onclick = navegarEm5s
+
+        //interessante tratar casos de EVENT's com classes personalizadas
+        const a = document.querySelector('[wait-sec]')
+        a.onclick = navegarEm5s
+
+
+
     </script>
 </body>

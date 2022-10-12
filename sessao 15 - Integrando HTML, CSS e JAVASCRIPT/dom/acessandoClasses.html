@@ -12,7 +12,20 @@
         Classes
     </div>
     <script>
-        // ...
+        //function
+        log = (texto, comando) => console.log(texto, comando, "\n=================") 
+
+        const classes = document.querySelector('div').classList
+        classes.add('destaque')
+        classes.remove('destaque')
+        classes.toggle('destaque')
+        log("tamanho antes: ", classes.length)
+        classes.add('destaque1')
+        classes.add('destaque2')
+        log('tamanho depois: ', classes.length)
+        log('Transformando em array: ', Array.from(classes))
+        log('usando spread [...]: ', [...classes])
+
     </script>
 </body>
 

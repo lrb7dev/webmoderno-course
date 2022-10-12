@@ -12,7 +12,25 @@
         <p>Texto Inicial</p>
     </div>
     <script>
-        // ...
+        //selecionar <div>
+        const div = document.querySelector('div')
+        //substitui tudo que está dentro da <div>, inclusive o <p>...
+        div.innerHTML = 'Texto alterado!'
+        
+        //substitui tudo, inclusive a <div>
+        //div.outerHTML = 'Substituiu tudo!' 
+
+        //adicionar antes de começar <div>
+        div.insertAdjacentHTML('beforebegin', '<p>Antes do início da DIV</p>')
+        //adicionar dentro da <div>, assim que começou o elemento.
+        div.insertAdjacentHTML('afterbegin', '<h3>Depois do INÍCIO da DIV</h3>')
+        div.insertAdjacentHTML('beforeend', '<h5>Antes do FIM da DIV</h5>')
+        div.insertAdjacentHTML('afterend', '<h1 style="color: tomato"> Depois do FIM da DIV</h1>')
+
+        console.log(div.innerHTML) // pegar tags = possibilidade
+        console.log('===================xxxxx===================')
+        console.log(div.innerText) // pegar texto = possibilidade
+
     </script>
 </body>
 
