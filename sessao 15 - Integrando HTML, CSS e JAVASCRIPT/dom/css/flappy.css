@@ -20,8 +20,7 @@
 .passaro {
     position: absolute; 
     width: 60px;
-    left: calc(50% - 30px); /*posicionando-o no meio*/
-    bottom: 50%; /*posicionando*/    
+    left: calc(50% - 30px); /*posicionando-o no meio*/   
 }
 
 .par-de-barreiras {
@@ -60,4 +59,5 @@
     right: 10px;
     font-family: 'Pixel';
     font-size: 70px;
+    z-index: 100;
 }
