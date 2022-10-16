@@ -2,7 +2,11 @@
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/assets/css/estilo.css ***!
   \********************************************************************************************************************/
 body {
-  background-color: #0f3453; }
+  background-color: #0f3453;
+  background-image: url(0eb800ec63a9a9a23284.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh; }
 
 /*!*********************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/assets/scss/index.scss ***!
