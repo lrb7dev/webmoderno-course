@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Entendendo jQuery</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+    <script src="js/jquery.js"></script>
+</head>
+
+<body class="conteudo exercicio">
+    <h1>Entendendo jQuery</h1>
+    <p>O JQuery é uma API que tem um foco
+        muito grande em consultar elementos e 
+        manipulá-los
+    </p>
+    <div>1</div>
+    <div>2</div>
+
+    <script>
+        //JQuery é referenciado com o síbolo $ ou jQuery
+        //selecionado as <div> 
+        //e as escondendo por 3s, 
+        //mostra novamente com 3s de animacao
+        //e aplica um fadeout com animacao de 3s
+        /*IMPORTANTE!!!!
+        * o que é retornado de $('div') não é o DOM e sim obejtos decorados!*/
+        $('div').hide(3000).show(3000).fadeOut(3000).fadeIn(3000)
+
+        //seletor pegará uma lista de elmentos e retornara o que tem no indice [0] desta lista
+        /*IMPORTANTE!!!
+        * neste caso está sendo pegado o objeto da DOM com o .get()*/
+        console.log('Lista - index[0]: ' , $('div').get(0)) 
+        console.log('=======================================\n')
+        //funcao utilitaria para verificar se um objeto está ou nao vazio
+        console.log('O objeto {} está vazio? ', $.isEmptyObject({}))
+        console.log('O objeto {nome: null} está vazio? ', $.isEmptyObject({nome: null}))
+        console.log('=======================================\n')
+        console.log('O número 3 está dentro do array [1,2,3]? ', jQuery.inArray(3, [1,2,3]))
+        console.log('O número 4 está dentro do array [1,2,3]? ', jQuery.inArray(4, [1,2,3]))
+        
+
+        //criar plugins
+        $.fn.fundoTomate = function () {
+            this.css('background-color', 'tomato')
+            return this //fazendo isso essa funcao pode desencadear chamadas
+        }
+
+        //inserindo e encadeando funcoes
+        $('body').fundoTomate().hide(6000).fadeIn(3000)
+
+
+
+    </script>
+</body>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Selecionando Elementos #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+    <script src='js/jquery.js'></script>
+    <style>
+        .bg001 {
+            background-color: rgb(65, 14, 6);
+        }
+
+        .fontColor001 {
+            color: #26154d;
+        }
+
+        .negrito {
+            font-weight: bold;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form input,
+        form select,
+        form button {
+            margin: 10px;
+            font-size: 1.6em;
+            
+        }
+    </style>
+</head>
+
+<body class='conteudo exercicio'>
+    <h1>Selecionando Elementos #01</h1>
+    <div>
+        <p>Parágrafo
+            <span class='negrito'>dentro span</span>
+        </p>
+    </div>
+    <div>
+        <ul id='feira'>
+            <li>000-A</li>
+            <li wm-obrigatorio>001-B</li>
+            <li class='opcional'>002-C</li>
+            <li class='opcional'>003-D</li>
+        </ul>
+    </div>
+    <form>
+        <input type='text' name='texto'>
+        <input type='password' name='senha'>
+        <input type='checkbox' name='check1'>
+        <input type='radio' name='radio1'>
+        <input type='file' name='arquivo'>
+    </form>
+
+    <script>
+        //seletores do proprio css e tambem filtros do JQuery
+        
+        //por seletores...
+        $('#feira').addClass('destaque').removeClass('destaque')
+        $('li').addClass('destaque')
+        $('[wm-obrigatorio]').removeClass('destaque')
+        $('li.opcional').addClass('bg001')
+        $('div p span').addClass('fontColor001')
+
+        //excluisivo JQuery:
+        //primeiro elemento
+        $('li:first').css('border', 'solid 6px #a5dbbb') 
+        //impares
+        $('li:odd').css('color', 'rgba(150, 150, 15, 90)') 
+        //:gt() --greater than-- maior que elemento de indice 1, ou seja, a partir do terceiro elemento
+        $('li:gt(1)').css('font-style', 'italic')
+        //:not() -- nao seja -- :last --o ultimo--
+        $('li:not(:last)').css('font-family', 'Rubik Moonrocks')
+        //se contem um caractere ou determinada palavra
+        $('li:contains("A")').css('color', '#000')
+
+        //esconder todos os elementos do formulario
+        $('form *').hide()
+        //mostrar o input text
+        $('form :text').show()
+        //mostrar o input password
+        $('form :password').fadeIn(3000)
+        //mostrar o input checkbox
+        $('form :checkbox').fadeIn(6000)
+        //mostrar o input radio
+        $('form :radio').fadeIn(9000)
+        //mostrar o input file
+        $('form :file').fadeIn(9000)
+
+
+
+
+
+
+
+    </script>
+</body>
