@@ -14,22 +14,46 @@
     <div id='div2'>2</div>
     <div id='resultado'></div>
     <script>
-        const fonte = $('#div1').css('font-family')
-        $('#resultado').append(`Fonte é ${fonte}`)
+        $(function(){
+            //armazena o valor atual do atributo
+            const fonte = $('#div1').css('font-family') //armazenando em 'fonte' o valor atual do atributo font-family da div#div1                    
+            //adicionando na div#resultado
+            $('#resultado').append(`Fonte é ${fonte}`) //string demonstrando qual o tipo da fonte 
+            //alterar um atributo css
+            $('#div1').css('font-size', '3em')
+            //mexendo em mais de uma propriedade
+            $('#div1').css({'font-size': '3.5em', 'color': '#000'} )
+            //passando um callback
+            $('#div1').css('font-size', function(){
+                return `${2 * 2}em`
+            })
 
-        $('#div1').css('font-size', '3em')
-        $('#div1').css({ 'font-size': '3.5em', 'color': 'yellow' })
-        $('#div1').css('font-size', function () {
-            return `${2 * 2}em`
-        })
+            //adicionando classes
+            $('#div2').addClass('destaque')
 
-        $('#div2').addClass('destaque')
+            //se uma classe esta ou nao presente em um determinado elemento
+            const temClasse = $('#div2').hasClass('destaque')
+            //console.log(`#div2 tem .destaque?? ${temClasse}`)
+            $('#resultado').append(`<br>#div2 tem .destaque?? ${temClasse}`)
 
-        const temClasse = $('#div2').hasClass('destaque')
-        $('#resultado').append(`<br>Tem class? ${temClasse}`)
+            //para remover uma classe
+            //$('#div2').removeClass('destaque')
 
-        $('#div2').removeClass('destaque')
-        $('#div2').toggleClass('destaque')
-        $('#div2').toggleClass('destaque')
+            //.toggleClass() -> se tiver a classe ela é removida e se nao tiver a classe ela é acrescentada
+            $('#resultado').toggleClass('destaque') //neste caso ira adicionar por nao ter a classe destaque
+
+
+
+
+        })//fim da function
+
+
+
+
+
+
+
+
+
     </script>
 </body>
