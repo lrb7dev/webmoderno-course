@@ -13,25 +13,37 @@
     <div id='conteudo'></div>
 
     <script>
-        const pessoas = [
-            {nome: 'Ana', nota: 9.1},
-            {nome: 'Bianca', nota: 8.4},
-            {nome: 'Carlos', nota: 7.6},
-            {nome: 'Julia', nota: 9.7}
-        ]
-        
-        //criar uma tabela com 02 colunas e coloque-a dentro da div
-        
 
-        
+        //um modo de chamar a funcao quando o documento estiver pronto
+        //$(function(){})
 
+        //quando o documento estiver pronto, chamara a funcao para ser executada
+        $(document).ready(function () {
+            //dados
+            const alunos = [
+                { nome: 'Ana', nota: 9.1 },
+                { nome: 'Bianca', nota: 8.4 },
+                { nome: 'Carlos', nota: 7.6 },
+                { nome: 'Julia', nota: 9.7 }
+            ]
 
+            //criando as linhas e colunas e inserindo os dados
+            const linhas = alunos.map (aluno => {
+                const tdNome = $('<td>').html(aluno.nome)
+                const tdNota = $('<td>').html(aluno.nota)
 
+                // return $('<tr>').append(tdNome).append(tdNota)
+                // return $('<tr>').append([tdNome, tdNota])
+                return $('<tr>').append(tdNome, tdNota)
+            })
 
+            //criando a tabela e inserindos as linhas e colunas
+            const tabela = $('<table>').append(linhas).css('border', 'solid 5px')
+            
+            //inserindo a tabela na DOM
+            $('#conteudo').append(tabela)
 
-
-
-
+        })
 
 
     </script>
