@@ -26,32 +26,45 @@
     <span id='resultado'></span>
 
     <script>
-        function exibirDadosEvento(e) {
-            $('#resultado').empty()
-            const div1 = $('<div>')
-            const div2 = $('<div>')
+        $(function(){
+            function exibirDadosEvento(e) {
+                //zerar os dados
+                $('#resultado').empty()
 
-            $('#resultado').append(div1, div2)
-            div1.append(`target: ${e.target.id}`)
+                const div1 = $('<div>')
+                const div2 = $('<div>')
 
-            const rt = e.relatedTarget ? e.relatedTarget.tagName : null
-            div1.append(`<br>relatedTarget: ${rt}`)
+                //criado as div's... agora um append na #resultado
+                $('#resultado').append(div1, div2)
+                //mostrar em #resultado o id que disparou o evento
+                div1.append(`target: ${e.target.id}`) 
+                
+                //related target
+                const rt = e.relatedTarget ? e.relatedTarget.tagName : null
+                div1.append(`<br>relatedTarget: ${rt}`)
 
-            div1.append(`<br>type: ${e.type}`)
-            div1.append(`<br>which: ${e.which}`)
-            div1.append(`<br>metaKey: ${e.metaKey}`)
+                //outros
+                div1.append(`<br>type: ${e.type}`) //tipo
+                div1.append(`<br>which: ${e.which}`) //posicao da tecla
+                div1.append(`<br>metaKey: ${e.metaKey}`) //true or false a metaKey
 
-            div2.append(`pageX: ${e.pageX}`)
-            div2.append(`<br>pageY: ${e.pageY}`)
-            div2.append(`<br>clientX: ${e.clientX}`)
-            div2.append(`<br>clientY: ${e.clientY}`)
+                //DIV2
+                //posicoes x e y
+                div2.append(`pageX: ${e.pageX}`)
+                div2.append(`<br>pageY: ${e.pageY}`)
+                div2.append(`<br>clientX: ${e.clientX}`)
+                div2.append(`<br>clientY: ${e.clientY}`)
 
-            const obs = e.data ? e.data.obs : null
-            div2.append(`<br>obs: ${obs}`)
-        }
+                //adicionando observacoes
+                const obs = e.data ? e.data.obs : null
+                div2.append(`<br>obs: ${obs}`)
+            }
 
-        $('#div1, #div2').on('mouseenter mouseleave', 
-            { obs: 'Funciona!' }, exibirDadosEvento)
-        $('input').keyup(exibirDadosEvento)
+            //associando as div's a funcao exibirDadosEventos
+            $('#div1, #div2').on('mouseenter mouseleave', {obs: 'Funciona!'}, exibirDadosEvento) 
+            $('input').keyup(exibirDadosEvento)
+
+
+        })//fim da function
     </script>
 </body>

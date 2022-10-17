@@ -21,25 +21,56 @@
     <input type="text" placeholder="Digite e Selecione">
     <div id="resultado2">?</div>
     <script>
+        $(function(){
+            //evento toogle() para alternar destaque
+            const alternarDestaque = () => $('#div1').toggleClass('destaque')
+            //ira chamar alternarDestaque toda vez que passar por cima da div#div1
+            //como tem um segundo paramento e é um evento vazio ele chama ele na saida
+            //$('#div1').on('mouseenter mouseleave', alternarDestaque)
+            $('#div1').hover(alternarDestaque, e => {} ) //com isso o destaque fica e se alterna apenas quando sair e voltar novamente passando o mouse por cima de div#div1
+
+            //evento sendo disparado um unica vez
+            //$('#div1').one('mouseenter', e => alert('ALERTA!!!'))
+
+            //evento de clique duplo
+            $('#div1').dblclick(e => $('#div1').fadeOut(1000).fadeIn(1000))
+
+            //evento quando esta redimensionando a tela
+            $(window).resize(function(e) {
+                const l = $(window).width() //pegando a largura
+                const a = $(window).height() //pegando a altura
+                //mostrando a dimensao no #resultado1
+                $('#resultado1').html(`Largura: ${l} e Altura: ${a}`)
+            })
+
+            //evento quando seleciona uma parte do texto
+            $(':input').select(e => {
+                const inicio = e.target.selectionStart
+                const fim = e.target.selectionEnd
+                //passando essa selecao para o #resultado2
+                //pegou os valores de e.target. setados em inicio e fim e os passou com string para #resultado2
+                $('#resultado2').html(e.target.value.substring(inicio, fim))
+            })
 
 
-        const alternarDestaque = () => $('#div1').toggleClass('destaque')
-        // $('#div1').on('mouseenter mouseleave', alternarDestaque)
-        $('#div1').hover(alternarDestaque, alternarDestaque)
 
-        $('#div1').one('mouseenter', e => alert('Aviso IMPORTANTE: Obrigado!'))
-        $('#div1').dblclick(e => $('#div1').fadeOut(1000).fadeIn(1000))
 
-        $(window).resize(function(e) {
-            const l = $(window).width()
-            const a = $(window).height()
-            $('#resultado1').html(`Largura: ${l} e Altura: ${a}`)
-        })
 
-        $(':input').select(e => {
-            const inicio = e.target.selectionStart
-            const fim = e.target.selectionEnd
-            $('#resultado2').html(e.target.value.substring(inicio, fim))
-        })
+
+
+
+
+
+
+
+
+
+
+
+
+
+        })//fim da function
+
+
     </script>
 </body>
