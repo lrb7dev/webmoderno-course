@@ -15,29 +15,63 @@
     <div id='div3'>3</div>
     <p class='numero'>4</p>
     <p class='numero'>5</p>
+    <p class='numero2'>6</p>
+    <p class='numero2'>7</p>
 
     <script>
-        $('#div1').append(', 2')
-        $('#div1').prepend('0, ')
 
+        //ADICIONANDO DENTRO DA DIV#1
+        //adicionando os caracteres ',2'
+        $('#div1').append(', 2') //adiciona depois 1
+        $('#div1').prepend('0, ') //adiciona antes 1
+        //criar elemento para adicionar
         $('<span>, 3</span>').appendTo('#div1')
         $('<span>-1, </span>').prependTo('#div1')
 
-        $('#div2').before('<p>Antes 2</p>')
-        $('#div2').after('<p>Depois 2</p>')
+        //ADICIONANDO FORA DAS DIV
+        //adicionando a tag<h1> antes da <div#div2>
+        $('#div2').before('<h1>Antes de div#2</h1>')
+        //adicionando a tag<p> depois da <div#div2>
+        $('#div2').after('<p>Depois de div#2</p>')
+        //adicionando a tag<h1> antes da <div#div3> 
+        $('<h1>Antes de div#3</h1>').insertBefore('#div3')
+        //adicionando a tag<p> depois da <div#3>
+        $('<p>Depois da div#3</p>').insertAfter('#div3')
 
-        $('<p>Antes 3</p>').insertBefore('#div3')
-        $('<p>Depois 3</p>').insertAfter('#div3')
 
-        // $('p.numero').wrap('<div>')
-        $('p.numero').wrapAll('<div id="div4">')
-        $("#div4").empty()
-        $('#div3, #div4').prev().remove()
+        //ENVOLVER ELEMENTOS
+        //envolver os elementos <p.numero> em <div> separadamente
+        $('p.numero').wrap('<div>')
+        //envolver os elementos <p.numero2> em uma unica <div>
+        $('p.numero2').wrapAll('<div id="div4">') //ira criar um id=div4 para ela
 
-        // $('<div>Substituto</div>').replaceAll('body > p')
-        // $('body > p').replaceWith('<div>Substituto</div>')
-        $('body > p').replaceWith(function() {
-            return $('<div>').html($(this).html()).append('!!!')
-        })
+        //PARA LIMPAR O CONTEUDO DA DIV / DEIXA-LA VAZIA
+        //$('#div4').empty()
+
+        //remover elementos antes do elemento selecionado
+        //$('#div3, #div4').prev().remove() // .remove() -- exclui da DOM!!!
+
+        //substituir todos os paragrafos do body pelo conteudo criado
+        //$('<div>SUBSTITUTO</div>').replaceAll('body > p') 
+        //ou...
+        //$('body > p').replaceWith('<div>Substituindo...</div>')
+        //ou...
+        //ENvolver as tags <p> existentes <body> com uma <div>
+        // $('body > p').replaceWith(function(){
+        //     //retorna uma div envolvendo <p> deste <html> mudando o seu <html>
+        //     return $('<div>').html($(this).html())
+        // })
+
+
+
+
+
+
+
+
+
+
+
+
     </script>
 </body>

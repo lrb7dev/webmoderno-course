@@ -16,27 +16,40 @@
     <div>Sem ID!</div>
 
     <script>
-        // Conteudo 1
-        $('#conteudo1').append('<p>1</p>')
-
-        // Conteudo 2
-        const elementos = [
-            $('<li></li>').append('Arroz'),
-            $('<li>').append('Feijão'),
-            $('<li>').append('Carne')
+        //conteudo 01 adicionando elementos
+        $('#conteudo1').append('<p>001 - adicionando parágrafo</p>')
+        
+        //conteudo 02
+        //criando um array para a <ul>
+        const elementosLi = [
+            $('<li></li>').append('Lamborghini'), //pode ser desta forma
+            $('<li>').append('Ferrari'), //ou desta forma
+            $('<li>').append('Mercedes Benz')
         ]
 
-        const lista = $('<ul><li>Sorvete</li></ul>')
-            .prepend(elementos)
-        $('#conteudo2').append(lista)
+        //criando a <ul>
+        const listaUl = $('<ul><li>Tesla</li></ul>').append(elementosLi)
+        //.prepand() -- caso queira passar os itens de elementos antes do <li> que sera criando abaixo na <ul>
 
-        // Conteudo 3
-        $('#conteudo3').append(['<h1>1</h1>', '<h1>2</h1>'])
-            .prepend('<h1>0</h1>')
-        $('#conteudo3').html('<h1>123</h1>')
-        $('#conteudo3').text('<h1>123</h1>')
+        //adicionando na página
+        $('#conteudo2').append(listaUl)
 
-        // Alterando todos
-        $('div[id]').html('<strong>Todos!</strong>')
+
+        //conteudo 03
+        //encadeando appends
+        $('#conteudo3').append('<h1>001</h1>', '<h2>002</h2>') //pode passar mais de uma separados por ","
+            .append('<h3>003</h3>') //encadeando mais appends
+            .prepend('<h4>000</h4>') //sera adicionado antes de todos estes acimas
+            .append(['<h5>005</h5>', '<h6>006</h6>']) //pode ser passado por array
+        //subtituir o conteudo
+        //$('#conteudo3').html('<h1>000 / 001</h1>')
+
+        //fazer scape = interpreta como se fosse uma div
+        //$('#conteudo3').text('<h1>000 / 001</h1>')
+
+        //alterando todos
+        //$('div[id]').html('<strong>Todos!</strong>')
+
+
     </script>
 </body>
