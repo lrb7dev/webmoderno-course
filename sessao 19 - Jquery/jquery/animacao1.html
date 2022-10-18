@@ -23,14 +23,36 @@
     <div id='animar'>Animar!</div>
 
     <script>        
-        $('button').click(e => {
-            const t = 1500
-            // $('#animar').hide(t).show(t)
-            $('#animar').toggle(t).toggle(t)
-            // $('#animar').fadeOut(t).fadeIn(t)
-            $('#animar').fadeToggle(t).fadeToggle(t)
-            // $('#animar').slideUp(t).slideDown(t)
-            $('#animar').slideToggle(t).slideToggle(t)
-        })
+        $(function(){
+           
+            $('button').click(e => {
+                const tempo = 1000
+                //$('#animar').hide(tempo).show(tempo)
+                //ira esconder e voltar a exibir
+                //$('#animar').toggle(tempo).toggle(tempo) //mesmo resultado da de cima
+                //toggle com fate
+                $('#animar').fadeToggle(tempo).fadeToggle(tempo)
+                //depois ira dar um slide fechando em sentindo para cima e um slide abrindo em sentido para baixo
+                $('#animar').slideUp(tempo).slideDown(tempo)
+                //('#animar').slideToggle(tempo).slideToggle(tempo)
+            })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        })//fim da function
+
+
+
     </script>
 </body>

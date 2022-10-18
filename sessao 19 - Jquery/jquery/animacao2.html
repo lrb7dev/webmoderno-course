@@ -28,18 +28,17 @@
     <div>Animar!</div>
 
     <script>
+        //animacao mais personalizada com o animate
         function alterarLargura(valor, duracao, callback) {
-            $('div').animate({ width: `+=${valor}` }, duracao
-                , callback)
+            $('div').animate({ width: `+=${valor}`}, duracao, callback )
         }
 
-        function moverDiagonal(valor, duracao, callback) {
-            $('div').animate({ top: `+=${valor}`, left: `+=${valor}` }
-                , duracao, callback)
+        function moverNaDiagonal(valor, duracao, callback) {
+            $('div').animate({ top: `+=${valor}`, left: `+=${valor}`}, duracao, callback)
         }
 
         function girar(valor, duracao, callback) {
-            $('div').animate({ transform: `+=${valor}` }, {
+            $('div').animate({ transform: `+=${valor}`}, {
                 step: function (valor) {
                     $(this).css('transform', `rotate(${valor}deg)`)
                 },
@@ -47,12 +46,18 @@
             }, 'linear', callback)
         }
 
-        alterarLargura(300, 100, () => {
-            alterarLargura(-300, 'slow', () => {
-                moverDiagonal(300, 600, () => {
-                    girar(3300, 3000)
+        //alterando largura e voltando tamanho normal,
+        //alterando posicao na diagonal e voltando para posicao inicial
+        //e depois ira girar
+        alterarLargura(300, 1000, () => {
+            alterarLargura(-300, 1000, () => {
+                moverNaDiagonal(300, 750, () => {
+                    moverNaDiagonal(-300, 1000, () => {
+                        girar(300, 1000)
+                    })
                 })
             })
         })
+
     </script>
 </body>

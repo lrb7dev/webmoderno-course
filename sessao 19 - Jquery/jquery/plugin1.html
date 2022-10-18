@@ -22,16 +22,27 @@
     </div>
 
     <script>
-        // const $ = { nome: 'Não é o jQuery' }
+        //o plugin criado ira substituir tudo que esta
+        //dentro de {{}} pelo resultado avaliado da expressao
         
-        (function ($) {
+        //proteger '$' de ser sobreescrito
+        (function($){
+            //funcao de interpretar
             $.fn.interpretar = function () {
-                const retirarChaves = s => s.substring(2, s.length - 2)
+                //para retirar as chaves
+                const retirarChaves = s => s.substring(2, s.length -2)
+                
+                //pegar o conteudo do html
                 const conteudo = $(this).html()
+                //aplicando regex
+                //lendo conteudo com {{e pegando todo conteudo dentro}}
                 const expressoesComChaves = conteudo.match(/\{\{.+\}\}/g)
+                //expressoes sem as chaves
                 const expressoes = expressoesComChaves.map(retirarChaves)
+                //pegando a expressao e passando ela para eval()
                 const resultados = expressoes.map(e => eval(e))
 
+                //subtituir a expressao com chaves pelo resultado associado
                 let conteudoFinal = conteudo
                 for (let i = 0; i < expressoesComChaves.length; i++) {
                     conteudoFinal = conteudoFinal.replace(
@@ -43,6 +54,13 @@
             }
         })(jQuery)
 
+
+        //substituindo na div
         $('div').interpretar()
+        
+        
+
+
+
     </script>
 </body>
