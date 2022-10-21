@@ -25,31 +25,109 @@
     <hr>
 
     <!-- Grid Básica -->
+    <!--passo-a-passo: Conteiner -> linhas -> colunas-->
+    <!--.container-flui: ocupa a area toda e
+    ----.container : oculpa area fixa-->
+    <div class="container-fluid setup-001">
+        Container
+        <!--adicionando a linha-->
+        <div class="row setup-002">
+            <!--adicionando a coluna-->
+            <!--como esta .col (menor dispositivo) ele ira 
+                dividir por 12 colunas dentro da .row-->
+            <div class="col bg-primary"><span>[1] espaço:[1-3]</span></div>
+            <div class="col bg-danger"><span>[2] espaço:[4-6]</span></div>
+            <div class="col bg-warning"><span>[3] espaço:[7-9]</span></div>
+            <div class="col bg-success"><span>[4] espaço:[10-12]</span></div>
+        </div>
+        <!--ocupar mais espaço em uma das colunas...-->
+        <div class="row mt-3 setup-003">
+            <!--a primeira ficar com o restante-->
+            <div class="col bg-danger"><span>[col][terá 4 colunas restantes]</span></div>
+            <!--as outras com quantidade predefinida-->
+            <div class="col-3 bg-success"><span>[col-3]</span></div>
+            <div class="col-5 bg-info"><span>[col-5]</span></div>
+        </div>
+    </div>
 
     <h1 class="mt-5">2. Grid Responsiva</h1>
     <hr>
 
     <!-- Grid Responsiva -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-1 bg-primary">1</div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-1 bg-danger">2</div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-1 bg-warning">3</div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-1 bg-info">4</div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-1 bg-success">5</div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-1 bg-secondary">6</div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-1 bg-danger">7</div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-1 bg-info">8</div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-1 bg-success">9</div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-1 bg-secondary">10</div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-1 bg-warning">11</div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-1 bg-primary">12</div>
+        </div>
+    </div>
 
     <h1 class="mt-5">3. Quebra de Linha</h1>
     <hr>
 
     <!-- Quebra de Linha -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3 bg-primary">col-1</div>
+            <div class="col-3 bg-secondary">col-2</div>
+            <!--.w-100 ira quebrar a linha e ocupar 100% da sua largura-->
+            <div class="w-100"></div>
+            <div class="col-3 bg-info">3</div>
+            <div class="w-100"></div>
+            <div class="col-3 bg-danger">4</div>
+        </div>
+    </div>
 
     <h1 class="mt-5">4. Ordem</h1>
     <hr>
 
     <!-- Ordem -->
+    <div class="container-fluid">
+        <div class="row">
+            <!--pode ir de 1 a 12 representando as 12 colunas-->
+            <div class="col-2 order-5 bg-primary">[1]</div>
+            <div class="col-2 order-3 bg-secondary">[2]</div>
+            <div class="col-2 order-6 bg-danger">[3]</div>
+            <div class="col-2 order-1 bg-success">[4]</div>
+            <div class="col-2 order-2 bg-info">[5]</div>
+            <div class="col-2 order-4 bg-success">[6]</div>
+        </div>
+    </div>
 
     <h1 class="mt-5">5. Offset</h1>
     <hr>
 
     <!-- Offset -->
+    <!--para deslocar para posicao determinada-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3 offset-7 bg-primary">1</div>
+            <div class="col-4 offset-3 bg-danger">2</div>
+            <div class="col-6 offset-6 bg-info">3</div>
+        </div>
+    </div>
 
     <h1 class="mt-5">6. Alinhamento</h1>
     <hr>
 
     <!-- Alinhamento -->
+    <!--BASEADO NO FLEXBOX A PARTIR DA VERSAO 4-->
+    <div class="container-fluid">
+        <div class="row h-300">
+            <div class="col-4 align-self-end bg-primary">1</div>
+            <div class="col-4 align-self-center bg-danger">2</div>
+            <div class="col-4 align-self-start bg-warning">3</div>
+        </div>
+    </div>
 </div>
 
 <style>
@@ -60,4 +138,32 @@
     .h-300 {
         height: 300px;
     }
+
+    .setup-001 {
+        border: 4px solid rgb(255, 99, 71);
+    }
+    .setup-002 {
+        border: 3px solid rgb(200, 255, 71);
+    }
+    .setup-003 {
+        border: 2px solid rgb(71, 249, 255);
+    }
+    .setup-004 {
+        border: 1px solid rgb(203, 71, 255);
+    }
+
+    .chess {
+        border: 3px solid rgb(233, 75, 75);
+    }
+
+    .bg-000 {
+        background-color: #000;
+    }
+
+    .bg-001 {
+        background-color: #fff;
+    }
+
+    
+
 </style>

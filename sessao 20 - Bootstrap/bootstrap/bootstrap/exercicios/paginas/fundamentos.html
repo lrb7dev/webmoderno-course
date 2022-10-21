@@ -39,9 +39,9 @@
     <hr>
 
     <!-- Espaços PREDEFINIDOS -->
-    <div class="mb-5">mb-5 [margin-bottom:5]</div>
-    <div class="m-4 py-4">m-4 py-4[maring:4][padding-y:4]</div>
-    <div class="pt-5">pt-5[padding-top:5]</div>
+    <div class="mb-5">mb-5 [mb-5 -> margin-bottom:5]</div>
+    <div class="m-4 py-4">m-4 py-4[m-4 -> maring:4][py-4 -> padding-y:4]</div>
+    <div class="pt-5">pt-5[pt-5 -> padding-top:5]</div>
 
     <h1 class="mt-5">3. Cores -
         <small>
@@ -74,6 +74,14 @@
     <hr>
 
     <!-- Flex -->
+    <div class="d-flex flex-column-reverse p-2">
+        <!--por ter a classe flex-column-reverse
+        a primeira DIV estará disposta como a ultima-->
+        <div class="align-self-end">[align-self-end][1]</div>
+        <div class="align-self-center">[align-self-center][2]</div>
+        <div class="align-self-start">[align-self-start][3]</div>
+        <span class="style-001">div -> d-flex flex-column-reverse - </span>
+    </div>
 
     <h1 class="mt-5">5. Imagens -
         <small>
@@ -83,6 +91,15 @@
     <hr>
 
     <!-- Imagens -->
+    <div class="p-2">
+        <!--img.mx-auto.d-block[src="/imgs/img1.png"]
+        para alinhar imagens no centro-->
+        <img src="/imgs/img1.png" alt="img1" class="mx-auto d-block" width="400px">
+        <img src="/imgs/img1.png" alt="img1" class="img-thumbnail" width="400px">
+        <img src="/imgs/img1.png" alt="img1" class="img-fluid" width="400px">
+        <img src="/imgs/img1.png" alt="img1" class="img-fluid rounded" width="400px">
+        <img src="/imgs/img1.png" alt="img1" class="img-fluid rounded-circle" width="250px" height="250px">
+    </div>
 
     <h1 class="mt-5">6. Float -
         <small>
@@ -92,11 +109,22 @@
     <hr>
 
     <!-- Float -->
+    <div class="my-1 p-3 float-right">[.float-right][1]</div>
+    <div class="my-1 p-3 float-left">[.float-left][2] default</div>
+    <div class="my-1 p-3 float-lg-right">[.float-lg-right][3]</div>
+    <!--<div class="my-1 p-3 float-right">[.float-none]</div>-->
+   
 </div>
 
 <style>
     .exercicio div {
-        border: solid 8px #000;
+        border: solid 8px rgb(103, 104, 102);
         font-size: 2rem;
+    }
+    .style-001 {
+        color: aquamarine;
+        font-weight: 600;
+        background-color: rgb(39, 20, 20);
+        text-align: center;
     }
 </style>
