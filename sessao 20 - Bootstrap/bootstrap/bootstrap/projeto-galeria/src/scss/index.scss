@@ -1,0 +1,8 @@
+@import "~bootstrap/scss/bootstrap"; //procurar dentro de node_modules
+
+//sobreescrever o nome da variavel
+$fa-font-path: "~font-awesome/fonts";
+@import "~font-awesome/scss/font-awesome"; //importando font-awesome
+
+//importando o custom.scss
+@import "custom";
