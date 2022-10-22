@@ -1,6 +1,7 @@
 //importante dependencias
 import React from 'react'
 import ReactDOM  from 'react-dom'
+//import BomDia from './componentes/BomDia'
 //import App from 'App'
 
 // //importando de compomentes
@@ -14,15 +15,43 @@ import ReactDOM  from 'react-dom'
 // //renderizar o primeiro elemento da página
 // ReactDOM.render(elemento, document.getElementById('root'))
 
-//importando componente
-import BomDia from './componentes/BomDia'
-//passando parametros
-//ReactDOM.render(<BomDia nome="Pedra Dourada"/>, document.getElementById('root'))
+// //importando componente
+// import BomDia from './componentes/BomDia'
+// //passando parametros
+// //ReactDOM.render(<BomDia nome="Pedra Dourada"/>, document.getElementById('root'))
 
 
-const container = document.getElementById('root')
-//create a root
-const root = ReactDOM.createRoot(container)
-//initial render
-root.render(<BomDia/>)
-//during an update, there is no need to pass container again!
+// const container = document.getElementById('root')
+// //create a root
+// const root = ReactDOM.createRoot(container)
+// //initial render
+// root.render(<BomDia/>)
+// //during an update, there is no need to pass container again!
+
+
+//------------------------------------------------
+//MULTIPLOS
+
+// import {BoaTarde, BoaNoite} from './componentes/Multiplos'
+// const container = document.getElementById('root')
+// //create a root
+// const root = ReactDOM.createRoot(container)
+// //initial render
+// //root.render(<BoaTarde/>)
+// //root.render(<BoaNoite></BoaNoite>) //BoaNoite -- sobreescre ------
+// //root.render(<BoaTarde/>, <BoaNoite/>) //BoaTarde -- sobreescre
+// root.render(
+//     <div>
+//         <BoaTarde nome="Ana"></BoaTarde>
+//         <BoaNoite nome="Carla"></BoaNoite>
+//     </div>
+// )
+
+//================= COMPONENTES DE CLASSES ===============
+import Saudacao from './componentes/Saudacao'
+
+ReactDOM.render(
+    <div>
+        <Saudacao tipo="Melee" nome="Knight"/>
+    </div>
+, document.getElementById('root'))
