@@ -12,6 +12,9 @@
             .then(resp => resp.text())
             .then(html => {
                 destino.innerHTML = html
+                //regex para usar o tooltip via ajax
+                eval(html.match(/\<script\>([\s\S]*)\<\/script\>/)[1])
+
             })
     }
 
