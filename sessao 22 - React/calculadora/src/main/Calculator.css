@@ -7,6 +7,7 @@
 
     display: grid;
     grid-template-columns: repeat(4, 25%); /*4 colunas de 25% cada*/
-    grid-template-rows: 48px 48px 48px 48px 48px; /*48px para cada uma das 5 linhas*/
+    /*1fr (restante disponivel na tela) + 48px para cada uma das 5 linhas = 6 rows*/
+    grid-template-rows: 1fr 48px 48px 48px 48px 48px; 
     
 }
