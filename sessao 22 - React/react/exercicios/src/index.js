@@ -48,10 +48,19 @@ import ReactDOM  from 'react-dom'
 // )
 
 //================= COMPONENTES DE CLASSES ===============
-import Saudacao from './componentes/Saudacao'
+// import Saudacao from './componentes/Saudacao'
+
+// ReactDOM.render(
+//     <div>
+//         <Saudacao tipo="Melee" nome="Knight"/>
+//     </div>
+// , document.getElementById('root'))
+
+//============= COMPONENTES PAI & FILHO =======================
+import Pai from './componentes/Pai'
 
 ReactDOM.render(
     <div>
-        <Saudacao tipo="Melee" nome="Knight"/>
+        <Pai nome="Paulo" sobrenome="Silva"/>
     </div>
-, document.getElementById('root'))
+)
