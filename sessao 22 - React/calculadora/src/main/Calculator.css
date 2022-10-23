@@ -2,6 +2,11 @@
     height: 320px;
     width: 235px;
     border-radius: 5px;
-    overflow: hidden;
-    background-color: tomato; /*temporário*/
+    overflow: hidden; /*para nao estrapolar visualmente os limites da calculadora*/
+    /*background-color: tomato; /*temporário*/
+
+    display: grid;
+    grid-template-columns: repeat(4, 25%); /*4 colunas de 25% cada*/
+    grid-template-rows: 48px 48px 48px 48px 48px; /*48px para cada uma das 5 linhas*/
+    
 }
