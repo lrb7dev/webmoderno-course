@@ -2,10 +2,14 @@
 
 
 LINK DO CURSO: https://www.udemy.com/course/curso-web/
+:+1::+1::+1::+1:
 
--- NOTA: o arquivos contem exemplos de boas práticas de códigos, assim como o que não "codar"!
--- Curso que estou fanzendo pela plataforma da UDEMY
--- CURSO ALTAMENTE RECOMENDADO PARA QUEM ESTA INICIANDO NESTE MUNDO MARAVILHOSO DO DESENVOLVIMENTO WEB ---- 
+![68747470733a2f2f63646e2d7468756d62732e636f6d69646f632e6e65742f3735302f313436353234345f656431615f332e6a7067](https://user-images.githubusercontent.com/113604638/197397154-4add7efd-babd-4745-923b-06fb6cd7388b.jpeg)
+
+
+> -- NOTA: o arquivos contem exemplos de boas práticas de códigos, assim como o que não "codar"!
+> -- Curso que estou fanzendo pela plataforma da UDEMY
+> -- CURSO ALTAMENTE RECOMENDADO PARA QUEM ESTA INICIANDO NESTE MUNDO MARAVILHOSO DO DESENVOLVIMENTO WEB ---- 
 
 CRÉDITOS: 
   Leonardo Moura Leitao (Professor do curso)
