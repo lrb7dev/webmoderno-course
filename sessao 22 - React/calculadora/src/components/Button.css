@@ -1,15 +1,41 @@
 :root {
-    --bg-button: #f0f0f0;
+    --bg-button: #eeeeee;
     --border-button: solid 1px #888
 }
 
 /*---------------------------------------*/
 
 .button {
-    font-size: 1.4em;
+    font-size: 1.8em;
     background-color: var(--bg-button);
     border: none;
     border-right: var(--border-button);
     border-bottom: var(--border-button);
     outline: none; /*retirar o marcador que fica no botao quando clicado*/
+}
+
+/*quando o botao estiver ativo*/
+.button:active {
+    background-color: #ccc;
+}
+
+/*para o botao ocupar dois espaços no grid*/
+.button.double {
+    grid-column: span 2;
+}
+
+/*para o botao ocupar tres espaços no grid*/
+.button.triple {
+    grid-column: span 3;
+}
+
+/*para botoes de operaçao*/
+.button.operation {
+    background-color: #fa6031;
+    color: #fff;
+}
+
+/*quando o botacao de operacao estiver ativo*/
+.button.operation:active {
+    background-color: #eb9a81cc;
 }

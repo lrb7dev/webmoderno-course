@@ -3,7 +3,7 @@
     background-color: #0005;
 
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
     padding: 20px;
     font-size: 2.1em;
