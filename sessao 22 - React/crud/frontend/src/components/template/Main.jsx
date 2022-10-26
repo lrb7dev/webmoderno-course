@@ -5,7 +5,7 @@ import Header from './Header'
 // eslint-disable-next-line import/no-anonymous-default-export
 export default props =>
     <React.Fragment>
-        <Header></Header>
+        <Header {...props}></Header>
         <main className="content">
             Conteudo
         </main>
