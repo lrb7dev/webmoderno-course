@@ -7,12 +7,17 @@
     },
     {
       "id": 2,
-      "name": "Maria Julia da Silva",
-      "email": "mjds@empresa.com"
+      "name": "Maria Julia da Silva Mendonça",
+      "email": "mjdsm@empresa.com"
     },
     {
-      "name": "Manoel Silveira",
-      "email": "MS_SM@check.com",
+      "user": {
+        "name": "",
+        "email": ""
+      },
+      "list": [],
+      "name": "Pedro Arantes",
+      "email": "Pedro_Arantes@empresa.com",
       "id": 3
     }
   ]
