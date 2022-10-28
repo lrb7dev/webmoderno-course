@@ -19,6 +19,16 @@
       "name": "Pedro Arantes",
       "email": "Pedro_Arantes@empresa.com",
       "id": 3
+    },
+    {
+      "user": {
+        "name": "",
+        "email": ""
+      },
+      "list": [],
+      "name": "Ana Carolina",
+      "email": "AnaC@rolina.com",
+      "id": 4
     }
   ]
 }
