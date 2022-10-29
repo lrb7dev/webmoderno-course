@@ -1,5 +1,5 @@
 import Navegador from "../components/Navegador"
-import styles from "../styles/Navegador.module.css"
+
 
 export default function Inicio() {
     
@@ -24,7 +24,9 @@ export default function Inicio() {
             <Navegador texto="Estilo" destino="/estilo" cor="coral"/>
             <Navegador texto="Exemplo" destino="/exemplo" cor="#12dd08" />
             <Navegador texto="JSx" destino="/jsx" cor="violet" />
-            <Navegador texto="Navegação #01" destino="/navegacao" cor="crimson"/>
+            <Navegador texto="Nav. #01" destino="/navegacao" cor="crimson"/>
+            <Navegador texto="Nav. #02 Dinâmica" destino="/cliente/mg/123" cor="#191970"/>
+            <Navegador texto="Comp. com Estado" destino="/estado" cor="#cad355"/>
         </div>
         
     ) 
