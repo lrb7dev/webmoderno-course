@@ -1,0 +1,12 @@
+.navegador {
+    /*background: linear-gradient(to right, rgb(49, 71, 85), rgb(115, 147, 245) , rgb(38, 160, 218));*/
+    padding: 30px;
+    box-shadow: 3px 3px 6px rgba(255, 255, 255, 0.363);
+    border-radius: 15px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.navegador:hover {
+    color: rgb(0, 0, 0);
+}

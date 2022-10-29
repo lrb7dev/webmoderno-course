@@ -1,0 +1,44 @@
+.layout{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/*--cabecalho--*/
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.cabecalho a {
+    background-color: rgb(1, 82, 82);
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.cabecalho a:hover {
+    color: rgb(1,82,82);
+    background-color: #fff;
+    border: 1px solid rgb(124, 124, 124);
+    font-size: 1em;
+}
+
+.cabecalho h1 {
+    margin: 0;
+    font-size: 1.4rem;
+    padding-right: 15px;
+}
+
+/*--conteudo--*/
+
+.conteudo {
+    padding: 25px;
+    height: 100%;
+}
