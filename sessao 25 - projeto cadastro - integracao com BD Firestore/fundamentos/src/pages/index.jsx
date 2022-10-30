@@ -27,6 +27,7 @@ export default function Inicio() {
             <Navegador texto="Nav. #01" destino="/navegacao" cor="crimson"/>
             <Navegador texto="Nav. #02 Dinâmica" destino="/cliente/mg/123" cor="#191970"/>
             <Navegador texto="Comp. com Estado" destino="/estado" cor="#cad355"/>
+            <Navegador texto="Pre-render STATIC" destino="/estatico" cor="#13aabb"/>
         </div>
         
     ) 
